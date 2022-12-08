@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata: 
+  name: mywebsite
+  labels:
+    app: mywebsite
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: mywebsite
+
+  template:
+    metadata:
+      labels:
+        app: mywebsite
+    spec:
+      containers:
+      - name: mywebsite
+        image: shiva9921/mywebsite:latest
+        ports:
+        - containerPort: 8080
+          name: mywebsite

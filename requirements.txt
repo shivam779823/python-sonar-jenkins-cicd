@@ -1,0 +1,6 @@
+Flask
+gunicorn
+pylint 
+pytest
+coverage
+pytest-cov
